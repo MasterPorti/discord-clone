@@ -1,0 +1,154 @@
+.container{
+    min-width: 240px;
+    background-color: #2b2d31;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow: scroll;
+    &::-webkit-scrollbar {
+        width: 0px;
+        height: 0px;
+      }
+}
+
+@media screen and (max-width: 880px) {
+    .container{
+        display: none;
+    }
+}
+
+.containerInput{
+    z-index: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    width: 240px;
+    height: 48px;
+    background-color: #2b2d31;
+    button{
+        cursor: pointer;
+        font-family: 'ggSans';
+        border-radius: 5px;
+        font-size: .9rem;
+        width:220px;
+        height: 28px;
+        padding: .4rem;
+        color: #9097a0;
+        background-color: #191a1c;
+        display: flex;
+        align-items: center;
+    }
+    border-bottom: #191a1c 1px solid;
+}
+
+.icon{
+    color: #949ba4;
+    width: 24px;
+    height: 24px;
+}
+
+
+.firstButton{
+    margin-top: 56px;
+}
+
+.button{
+    width: 216px;
+    height: 42px;
+    transition: background-color .2s ease-in-out;
+    border-radius: 3px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 1rem;
+    padding: .5rem;
+    p{
+        color: #949ba4;
+    }
+    &:hover{
+        cursor: pointer;
+        background-color: #35373c;
+    }
+}
+
+
+.subtitle{
+    margin-top: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 216px;
+    font-size: .9rem;
+    color: #949ba4;
+    user-select: none;
+    margin-bottom: .8rem;
+    svg{
+        transform: scale(.8);
+        cursor: pointer;
+    }
+    p:hover{
+        color: #fff;
+    }
+
+}
+
+
+.sectionChats{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 3px;
+    width: 240px;
+}
+
+
+
+.chatPreview{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: .9rem;
+    color: #949ba4;
+    width: 230px;
+    height: 42px;
+    padding: .5rem;
+    border-radius: 3px;
+    transition: background-color .2s ease-in-out;
+    &:hover{
+        color: #fff;
+        cursor: pointer;
+        background-color: #35373c; 
+        svg{
+            color: #949ba4;
+        }
+    }
+    img{
+        width: 35px;
+        height: 35px;
+        border-radius: 2rem;
+    }
+    svg{
+        color: #2b2d31;
+        transform: rotate(45deg);
+        width: 20px;
+    }
+    svg:hover{
+        color: #fff;
+    }
+    div{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: .5rem;
+    }
+}
+
+.chatActive{
+    background-color: #35373c;
+    color: #fff;
+    svg{
+        color: #35373c;
+    }
+}
