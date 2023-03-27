@@ -1,0 +1,159 @@
+.container{
+    width: 100%;
+    height: 626px;
+    background-color: #404eed;
+    color: #f0f8ff;
+    overflow: hidden;
+}
+
+.containerMenu{
+    overflow: hidden;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    z-index: 3;
+    position: relative;
+}
+
+.menu{
+    display: flex;
+    justify-content: space-between;
+    max-width: 1260px;
+    margin: 0rem 1rem 0 1rem;
+    width: 100%;
+    height: 80px;
+    align-items: center;
+    img{
+        width: 124px;
+        height: 24px;
+    }
+
+    div{
+        display: flex;
+        gap: 3rem;
+        justify-content: space-between;
+    }
+    button{
+        background-color: #f0f8ff;
+        color: #000000;
+        border-radius: 40px;
+        font-size: 14px;
+        padding: 7px 16px;
+    }
+}
+
+.imagen{
+    width: 100px;
+    object-fit: contain;
+    position: fixed;
+    z-index: 1;
+}
+
+.titleContainer{
+    z-index: 3;
+    position: relative;
+    margin-top: 3rem;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.title{
+    font-size: 58px;
+    margin-top: 3rem;
+    font-family: 'nord';
+}
+
+.subtitle{
+    max-width: 900px;
+    width: 80%;
+    text-align: center;
+    font-size: 20px;
+}
+
+
+.containerButtons{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-top: 3rem;
+    font-size: 1.3rem;
+    gap: 1rem;
+    z-index: 3;
+    position: relative;
+}
+
+.buttonGoogle{
+    display: flex;
+    align-items: center;
+    gap: .4rem;
+    background-color: #fefdfd;
+    outline: none;
+    cursor: pointer;
+    transition: background-color .3s ease;
+    &:hover{
+        background-color: #e0e0e0;
+    }
+    padding: 1rem 2rem;
+    border-radius: 4rem;
+    color: #000000;
+    svg{
+        width: 24px;
+    }
+}
+
+.buttonGithub{
+    display: flex;
+    padding: 1rem 2rem;
+    align-items: center;
+    border-radius: 4rem;
+    background-color: #292929;
+    color: #fefdfd;
+    gap: .4rem;
+    cursor: pointer;
+    transition: background-color .3s ease;
+    &:hover{
+        background-color: #000000;
+    }
+    svg{
+        width: 24px;
+    }
+}
+
+.containerWarning{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    z-index: 3;
+    position: relative;
+    p{
+        text-align: center;
+        margin: 1rem;
+        font-size: 20px;
+        color: #ffffff;
+        font-family: 'ggSansBlack';
+    }
+}
+
+.imagenContainer{
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: block;
+    z-index: 2;
+    transform: translate(-50px ,270px);
+}
+.imagenBackgroundContainer{
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: block;
+    z-index: 1;
+    width: 100%;
+    transform: translateY(80px);
+    svg{
+        width: 100%;
+    }
+}

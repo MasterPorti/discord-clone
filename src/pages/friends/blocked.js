@@ -4,9 +4,10 @@ import styles from '../../styles/Home.module.scss'
 import EmptyContent from '../../components/emptyContent'
 import block from '../../../public/block.svg'
 import NoActive from '../../components/noActive'
-export default function Pending () {
+import { getSession } from 'next-auth/react'
+export default function Pending ({ session }) {
   return (
-    <Layaout>
+    <Layaout session={session} title='Discord | Blocked'>
       <FriendsMenu />
       <div className={styles.container}>
         <EmptyContent picture={block}>
@@ -18,4 +19,20 @@ export default function Pending () {
       </div>
     </Layaout>
   )
+}
+export const getServerSideProps = async (context) => {
+  const session = await getSession(context)
+  if (!session) {
+    return {
+      redirect: {
+        destination: '/login',
+        permanent: false
+      }
+    }
+  }
+  return {
+    props: {
+      session
+    }
+  }
 }

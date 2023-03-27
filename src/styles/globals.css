@@ -11,6 +11,24 @@
   src: url('../../public/ggSansBold.woff2') format('woff2');
 }
 
+@font-face {
+  font-family: 'ggSansBlack';
+  src: url('../../public/ggSansBlack.woff2') format('woff2');
+}
+
+
+@font-face {
+  font-family: 'ggSansLight';
+  src: url('../../public/ggSansLight.woff2') format('woff2');
+}
+
+
+@font-face {
+  font-family: 'nord';
+  src: url('../../public/nord.woff2') format('woff2');
+}
+
+
 
 * {
   margin: 0;
@@ -105,11 +123,7 @@ td {
   border-spacing: 0;
 }
 
-svg {
-  width: 100%;
-  display: block;
-  fill: currentColor;
-}
+
 p svg {
   display: inline;
   width: initial;
@@ -122,6 +136,6 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   /* font-family: 'Inder', sans-serif; */
-  font-family: "Roboto", sans-serif;
+  font-family: "ggSans", sans-serif;
   
 }

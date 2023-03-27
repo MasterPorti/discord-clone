@@ -30,7 +30,7 @@ function Home ({ avatar }) {
   const router = useRouter()
   return (
     <Link href='/'>
-      <div className={router.pathname === '/' ? styles.profileActive : styles.profileContainer}>
+      <div className={router.pathname === '/home' ? styles.profileActive : styles.profileContainer}>
         <Image src={avatar} alt='profile' width={48} height={48} />
       </div>
     </Link>

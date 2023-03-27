@@ -2,7 +2,7 @@ import Head from 'next/head'
 import Menu from './menu'
 import styles from '../styles/menu.module.scss'
 import Direct from './direct'
-function Layaout ({ title, description, children }) {
+function Layaout ({ title = 'Discord ', description, children, session }) {
   return (
     <>
       <Head>
@@ -11,7 +11,7 @@ function Layaout ({ title, description, children }) {
       </Head>
       <main className={styles.mainmenu}>
         <Menu />
-        <Direct />
+        <Direct session={session} />
         <section className={styles.mainContainer}>
           {children}
         </section>

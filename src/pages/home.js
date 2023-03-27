@@ -1,25 +1,29 @@
+
 import FriendsMenu from '@/components/friendsMenu'
 import Layaout from '@/components/layaout'
-import styles from '../../styles/Home.module.scss'
-import EmptyContent from '../../components/emptyContent'
-import pending from '../../../public/online.svg'
-import NoActive from '../../components/noActive'
+import styles from '../styles/Home.module.scss'
+import online from '../../public/online.svg'
+import NoActive from '@/components/noActive'
+import EmptyContent from '@/components/emptyContent'
 import { getSession } from 'next-auth/react'
-export default function Pending ({ session }) {
+
+export default function Home ({ session }) {
+  console.log(session)
   return (
-    <Layaout session={session} title='Discord | pending'>
+    <Layaout session={session} title='Discord | Friends'>
       <FriendsMenu />
       <div className={styles.container}>
-        <EmptyContent picture={pending}>
-          No hay solicitudes de amistad pendientes. Aquí tienes a Wumpus por ahora.
+        <EmptyContent picture={online}>
+          No hay nadie por aquí para jugar con Wumpus.
         </EmptyContent>
-        <main>
-          <NoActive />
-        </main>
+
+        <NoActive />
+
       </div>
     </Layaout>
   )
 }
+
 export const getServerSideProps = async (context) => {
   const session = await getSession(context)
   if (!session) {
